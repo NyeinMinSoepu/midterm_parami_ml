@@ -1,7 +1,8 @@
 streamlit
 pandas
 joblib
-sklearn
+sklearn==1.7.1
+
 
 
 
