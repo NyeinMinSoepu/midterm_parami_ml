@@ -1,6 +1,6 @@
 import pandas as pd
-import streamlit
-import pandas
+import streamlit as st
+import pickle
 
 def load_model():
     with open("c_churn_model.pkl", "rb") as f:
@@ -94,6 +94,7 @@ if st.button("🚀 Predict"):
         st.success(f'**🎉 This is your customer**')
     else:
         st.error(f'**💔 This is no longer your customer**')
+
 
 
 
