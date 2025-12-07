@@ -1,10 +1,10 @@
 import pandas as pd
 import streamlit as st
-import pickle
+import joblib
 
 def load_model():
     with open("c_churn_model.pkl", "rb") as f:
-        model = pickle.load(f)
+        model = joblib.load(f)
     return model
 
 # slidebar
@@ -94,6 +94,7 @@ if st.button("🚀 Predict"):
         st.success(f'**🎉 This is your customer**')
     else:
         st.error(f'**💔 This is no longer your customer**')
+
 
 
 
